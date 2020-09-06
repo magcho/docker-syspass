@@ -7,8 +7,9 @@ FROM composer:1.7 as bootstrap
 
 ENV SYSPASS_BRANCH="master"
 
-RUN git clone --branch ${SYSPASS_BRANCH} https://github.com/nuxsmin/sysPass.git \
-  && composer install \
+COPY ./sysPass /app/sysPass
+
+RUN  composer install \
     --ignore-platform-reqs \
     --no-interaction \
     --no-plugins \

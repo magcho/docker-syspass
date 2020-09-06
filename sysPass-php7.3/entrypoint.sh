@@ -58,7 +58,8 @@ setup_locales() {
     echo "da.UTF-8 UTF-8" >> $LOCALE_GEN
     echo "it_IT.UTF-8 UTF-8" >> $LOCALE_GEN
     echo "fo.UTF-8 UTF-8" >> $LOCALE_GEN
-
+		echo "ja_JP.UTF-8 UTF-8" >> $LOCALE_GEN
+		
     echo 'LANG="en_US.UTF-8"' > /etc/default/locale
 
     dpkg-reconfigure --frontend=noninteractive locales
