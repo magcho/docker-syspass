@@ -10,6 +10,7 @@ services:
     links:
       - db
     volumes:
+      - ./sysPass/app/locales/ja_JP:/var/www/html/sysPass/app/locaes/ja_JP
       - /var/www/html/sysPass/app/config
       - /var/www/html/sysPass/app/backup
   db:
